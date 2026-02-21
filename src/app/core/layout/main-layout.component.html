@@ -1,10 +1,9 @@
-<!-- Track lang for re-render when switching language -->
 @if (translation.lang(); as _) {}
 <div class="app-shell">
-  <div class="demo-banner">{{ 'app.demoBanner' | translate }}</div>
-  <header class="header">
+  <div class="demo-banner" role="status">{{ 'app.demoBanner' | translate }}</div>
+  <header class="header" role="banner">
     <a routerLink="/" class="logo">{{ 'app.title' | translate }}</a>
-    <nav class="nav">
+    <nav class="nav" aria-label="Main">
       <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
         {{ 'nav.dashboard' | translate }}
       </a>
@@ -17,6 +16,8 @@
         class="lang-btn"
         [class.active]="translation.lang() === 'en'"
         (click)="setLanguage('en')"
+        type="button"
+        aria-label="English"
       >
         EN
       </button>
@@ -24,6 +25,8 @@
         class="lang-btn"
         [class.active]="translation.lang() === 'ar'"
         (click)="setLanguage('ar')"
+        type="button"
+        aria-label="العربية"
       >
         ع
       </button>

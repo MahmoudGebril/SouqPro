@@ -1,54 +1,52 @@
 # SouqPro
 
-Angular 20+ bilingual retail management SaaS demo with signals, computed state, dynamic sales analytics, and RTL support.
+A retail management dashboard built with Angular 21—designed as a portfolio demo for small businesses in the Middle East. Features bilingual support (English/Arabic), RTL layout, and mock analytics.
 
-## Overview
+## Highlights
 
-SouqPro is a portfolio-level SaaS demo for small retail businesses in the Middle East. It's a standalone Angular 20+ application demonstrating a retail management dashboard with bilingual support (English/Arabic), RTL layout for Arabic, and mock data for inventory, sales, and analytics.
+- **Modern Angular** — Standalone components, Signals for state, `computed()` for derived data
+- **i18n** — Custom JSON-based translation (no ngx-translate), full RTL support for Arabic
+- **Chart.js** — Sales trends, revenue over time, category breakdown
+- **Clean architecture** — Feature-based structure, shared services, typed models
 
 ## Tech Stack
 
-- **Angular 21** (standalone components)
-- **Signals** for state management
-- **RxJS** where needed
-- **Chart.js** for data visualization
-- **JSON-based i18n** (no external translation library)
+| Layer | Choice |
+|-------|--------|
+| Framework | Angular 21 |
+| State | Signals + `computed()` |
+| Charts | Chart.js |
+| i18n | Custom service (JSON) |
+| Styling | Utility-first CSS, CSS variables |
 
-## Features
-
-- **Dashboard**: Sales metrics, revenue trends, category distribution charts
-- **Inventory**: Product catalog with search, low-stock highlighting
-- **Sales**: Transaction history with search
-- **Settings**: Language switcher, store information
-- **Internationalization**: English (default) and Arabic with RTL support
-
-## Project Structure
-
-```
-src/app/
-├── core/
-│   ├── layout/          # Main layout, header, nav
-│   └── services/        # Translation service
-├── shared/
-│   ├── components/      # Reusable components (e.g. Chart)
-│   └── pipes/           # Translate pipe
-├── models/              # Product, Sale interfaces
-├── services/            # Mock data service
-└── features/
-    ├── dashboard/
-    ├── inventory/
-    ├── sales/
-    └── settings/
-```
-
-## Development
+## Getting Started
 
 ```bash
 npm install
 npm start
 ```
 
-Navigate to `http://localhost:4200`.
+Open [http://localhost:4200](http://localhost:4200).
+
+## Project Structure
+
+```
+src/app/
+├── core/           # Layout, translation service
+├── shared/         # Chart component, translate pipe
+├── features/       # Dashboard, Inventory, Sales, Settings
+├── models/         # Product, Sale interfaces
+└── services/       # Mock data generator
+```
+
+## What's Inside
+
+- **Dashboard** — Today's sales, monthly revenue, low-stock alerts, best seller, 3 charts
+- **Inventory** — Product table with search, low-stock highlighting
+- **Sales** — Transaction history with search
+- **Settings** — Language switcher (EN/العربية), store info
+
+Mock data: 30 products, 250 sales across 3 months. Categories include Electronics, Clothing, Perfumes, Groceries, Accessories—with realistic Arabic product names.
 
 ## Build
 
@@ -56,10 +54,4 @@ Navigate to `http://localhost:4200`.
 npm run build
 ```
 
-## Demo Data
-
-- 30 products across 5 categories (Electronics, Clothing, Perfumes, Groceries, Accessories)
-- 250 sales over 3 months
-- Realistic Middle Eastern product names and store owners
-
-**Note:** This is a demo version with simulated data only. No backend is included.
+Output in `dist/SouqPro/`.

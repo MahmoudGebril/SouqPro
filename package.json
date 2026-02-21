@@ -1,6 +1,8 @@
 {
   "name": "souq-pro",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Retail management dashboard for Middle East — Angular 21, i18n, RTL",
+  "repository": "https://github.com/MahmoudGebril/SouqPro",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

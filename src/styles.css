@@ -20,7 +20,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   background: var(--color-bg);
   color: var(--color-text);
   font-size: 15px;
@@ -28,7 +28,7 @@ html, body {
 }
 
 [dir="rtl"] {
-  font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+  font-family: 'Noto Sans Arabic', 'Segoe UI', Tahoma, sans-serif;
 }
 
 .app-shell {
@@ -79,6 +79,11 @@ html, body {
   background: #f1f5f9;
 }
 
+.nav a:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
 .nav a.active {
   color: var(--color-primary);
   font-weight: 500;
@@ -100,6 +105,11 @@ html, body {
 
 .lang-btn:hover {
   background: #f8fafc;
+}
+
+.lang-btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
 .lang-btn.active {
@@ -217,6 +227,12 @@ html, body {
   border-radius: var(--radius);
   font-size: .9rem;
   min-width: 200px;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, .2);
 }
 
 .table-wrap {

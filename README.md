@@ -1,10 +1,10 @@
 # SouqPro
 
-A portfolio-level SaaS demo for small retail businesses in the Middle East.
+Angular 20+ bilingual retail management SaaS demo with signals, computed state, dynamic sales analytics, and RTL support.
 
 ## Overview
 
-SouqPro is a standalone Angular 20+ application demonstrating a retail management dashboard with bilingual support (English/Arabic), RTL layout for Arabic, and mock data for inventory, sales, and analytics.
+SouqPro is a portfolio-level SaaS demo for small retail businesses in the Middle East. It's a standalone Angular 20+ application demonstrating a retail management dashboard with bilingual support (English/Arabic), RTL layout for Arabic, and mock data for inventory, sales, and analytics.
 
 ## Tech Stack
 

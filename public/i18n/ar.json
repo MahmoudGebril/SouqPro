@@ -1,0 +1,55 @@
+{
+  "app": {
+    "title": "سوق برو",
+    "demoBanner": "نسخة تجريبية – بيانات بيع محاكاة"
+  },
+  "nav": {
+    "dashboard": "لوحة التحكم",
+    "inventory": "المخزون",
+    "sales": "المبيعات",
+    "settings": "الإعدادات"
+  },
+  "dashboard": {
+    "title": "لوحة التحكم",
+    "todaySales": "مبيعات اليوم",
+    "todayRevenue": "إيرادات اليوم",
+    "monthlyRevenue": "إيرادات الشهر",
+    "lowStockItems": "منتجات منخفضة المخزون",
+    "bestSellingProduct": "الأكثر مبيعاً",
+    "salesPerDay": "المبيعات يومياً",
+    "revenueTrend": "اتجاه الإيرادات",
+    "categoryDistribution": "توزيع الفئات"
+  },
+  "inventory": {
+    "title": "المخزون",
+    "searchPlaceholder": "بحث عن منتجات...",
+    "sku": "رمز المنتج",
+    "name": "الاسم",
+    "category": "الفئة",
+    "price": "السعر",
+    "stock": "المخزون",
+    "actions": "إجراءات",
+    "lowStock": "مخزون منخفض"
+  },
+  "sales": {
+    "title": "المبيعات",
+    "searchPlaceholder": "بحث عن مبيعات...",
+    "date": "التاريخ",
+    "product": "المنتج",
+    "quantity": "الكمية",
+    "total": "الإجمالي",
+    "noSales": "لا توجد مبيعات"
+  },
+  "settings": {
+    "title": "الإعدادات",
+    "language": "اللغة",
+    "rtl": "من اليمين لليسار",
+    "storeInfo": "معلومات المتجر",
+    "owner": "مالك المتجر"
+  },
+  "common": {
+    "currency": "ر.س",
+    "items": "منتجات",
+    "viewAll": "عرض الكل"
+  }
+}

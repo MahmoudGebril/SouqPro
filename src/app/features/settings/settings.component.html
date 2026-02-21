@@ -1,0 +1,37 @@
+<div class="page settings">
+  <header class="page-header">
+    <h1>{{ 'settings.title' | translate }}</h1>
+  </header>
+
+  <div class="settings-section">
+    <h2>{{ 'settings.language' | translate }}</h2>
+    <div class="lang-buttons">
+      <button
+        class="btn"
+        [class.active]="translation.lang() === 'en'"
+        (click)="setLanguage('en')"
+      >
+        English
+      </button>
+      <button
+        class="btn"
+        [class.active]="translation.lang() === 'ar'"
+        (click)="setLanguage('ar')"
+      >
+        العربية
+      </button>
+    </div>
+  </div>
+
+  <div class="settings-section">
+    <h2>{{ 'settings.storeInfo' | translate }}</h2>
+    <div class="owner-list">
+      @for (owner of owners; track owner.name) {
+        <div class="owner-card">
+          <span class="owner-name">{{ translation.lang() === 'ar' ? owner.nameAr : owner.name }}</span>
+          <span class="owner-role">{{ 'settings.owner' | translate }}</span>
+        </div>
+      }
+    </div>
+  </div>
+</div>

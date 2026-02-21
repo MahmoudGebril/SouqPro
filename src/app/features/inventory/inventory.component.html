@@ -1,0 +1,41 @@
+<div class="page inventory">
+  <header class="page-header">
+    <h1>{{ 'inventory.title' | translate }}</h1>
+    <input
+      type="search"
+      class="search-input"
+      [placeholder]="'inventory.searchPlaceholder' | translate"
+      (input)="searchQuery.set($any($event.target).value)"
+    />
+  </header>
+
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>{{ 'inventory.sku' | translate }}</th>
+          <th>{{ 'inventory.name' | translate }}</th>
+          <th>{{ 'inventory.category' | translate }}</th>
+          <th>{{ 'inventory.price' | translate }}</th>
+          <th>{{ 'inventory.stock' | translate }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (p of filteredProducts(); track p.id) {
+          <tr [class.low-stock]="p.stock < 10">
+            <td>{{ p.sku }}</td>
+            <td>{{ translation.lang() === 'ar' ? p.nameAr : p.name }}</td>
+            <td>{{ p.category }}</td>
+            <td>{{ p.price | number:'1.0-0' }} {{ 'common.currency' | translate }}</td>
+            <td>
+              <span [class.badge]="p.stock < 10">{{ p.stock }}</span>
+              @if (p.stock < 10) {
+                <span class="low-label">({{ 'inventory.lowStock' | translate }})</span>
+              }
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>

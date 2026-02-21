@@ -1,0 +1,65 @@
+<div class="dashboard">
+  <div class="stat-cards">
+    <div class="stat-card">
+      <span class="stat-label">{{ 'dashboard.todaySales' | translate }}</span>
+      <span class="stat-value">{{ stats().todayRevenue | number:'1.0-0' }}</span>
+      <span class="stat-meta">{{ 'common.currency' | translate }}</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-label">{{ 'dashboard.monthlyRevenue' | translate }}</span>
+      <span class="stat-value">{{ stats().monthlyRevenue | number:'1.0-0' }}</span>
+      <span class="stat-meta">{{ 'common.currency' | translate }}</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-label">{{ 'dashboard.lowStockItems' | translate }}</span>
+      <span class="stat-value">{{ stats().lowStockCount }}</span>
+      <span class="stat-meta">{{ 'common.items' | translate }}</span>
+    </div>
+    <div class="stat-card stat-card-highlight">
+      <span class="stat-label">{{ 'dashboard.bestSellingProduct' | translate }}</span>
+      @if (stats().bestSelling) {
+        <span class="stat-value stat-product">{{ translation.lang() === 'ar' ? stats().bestSelling!.nameAr : stats().bestSelling!.name }}</span>
+        <span class="stat-meta">{{ stats().bestSelling!.total }} {{ 'common.items' | translate }}</span>
+      } @else {
+        <span class="stat-value">—</span>
+      }
+    </div>
+  </div>
+
+  <div class="charts-grid">
+    <div class="chart-card">
+      <h3>{{ 'dashboard.salesPerDay' | translate }}</h3>
+      <div class="chart-container">
+        <app-chart
+          type="line"
+          [labels]="salesPerDay().labels"
+          [data]="salesPerDay().values"
+          label="Sales"
+        />
+      </div>
+    </div>
+    <div class="chart-card">
+      <h3>{{ 'dashboard.revenueTrend' | translate }}</h3>
+      <div class="chart-container">
+        <app-chart
+          type="line"
+          [labels]="revenueTrend().labels"
+          [data]="revenueTrend().values"
+          label="Revenue"
+        />
+      </div>
+    </div>
+    <div class="chart-card chart-card-wide">
+      <h3>{{ 'dashboard.categoryDistribution' | translate }}</h3>
+      <div class="chart-container chart-doughnut">
+        <app-chart
+          type="doughnut"
+          [labels]="categoryDist().labels"
+          [data]="categoryDist().values"
+          label="Revenue"
+          [colors]="['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6']"
+        />
+      </div>
+    </div>
+  </div>
+</div>

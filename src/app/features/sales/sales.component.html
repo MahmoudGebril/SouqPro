@@ -1,0 +1,38 @@
+<div class="page sales">
+  <header class="page-header">
+    <h1>{{ 'sales.title' | translate }}</h1>
+    <input
+      type="search"
+      class="search-input"
+      [placeholder]="'sales.searchPlaceholder' | translate"
+      (input)="searchQuery.set($any($event.target).value)"
+    />
+  </header>
+
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>{{ 'sales.date' | translate }}</th>
+          <th>{{ 'sales.product' | translate }}</th>
+          <th>{{ 'sales.quantity' | translate }}</th>
+          <th>{{ 'sales.total' | translate }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (s of filteredSales(); track s.id) {
+          <tr>
+            <td>{{ s.date | date:'short' }}</td>
+            <td>{{ translation.lang() === 'ar' ? s.productNameAr : s.productName }}</td>
+            <td>{{ s.quantity }}</td>
+            <td>{{ s.total | number:'1.0-0' }} {{ 'common.currency' | translate }}</td>
+          </tr>
+        } @empty {
+          <tr>
+            <td colspan="4" class="empty">{{ 'sales.noSales' | translate }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>

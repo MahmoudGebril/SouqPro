@@ -1,0 +1,35 @@
+<!-- Track lang for re-render when switching language -->
+@if (translation.lang(); as _) {}
+<div class="app-shell">
+  <div class="demo-banner">{{ 'app.demoBanner' | translate }}</div>
+  <header class="header">
+    <a routerLink="/" class="logo">{{ 'app.title' | translate }}</a>
+    <nav class="nav">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        {{ 'nav.dashboard' | translate }}
+      </a>
+      <a routerLink="/inventory" routerLinkActive="active">{{ 'nav.inventory' | translate }}</a>
+      <a routerLink="/sales" routerLinkActive="active">{{ 'nav.sales' | translate }}</a>
+      <a routerLink="/settings" routerLinkActive="active">{{ 'nav.settings' | translate }}</a>
+    </nav>
+    <div class="lang-switcher">
+      <button
+        class="lang-btn"
+        [class.active]="translation.lang() === 'en'"
+        (click)="setLanguage('en')"
+      >
+        EN
+      </button>
+      <button
+        class="lang-btn"
+        [class.active]="translation.lang() === 'ar'"
+        (click)="setLanguage('ar')"
+      >
+        ع
+      </button>
+    </div>
+  </header>
+  <main class="main">
+    <router-outlet />
+  </main>
+</div>

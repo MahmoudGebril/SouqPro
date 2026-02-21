@@ -1,0 +1,55 @@
+{
+  "app": {
+    "title": "SouqPro",
+    "demoBanner": "Demo Version – Simulated Retail Data"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "inventory": "Inventory",
+    "sales": "Sales",
+    "settings": "Settings"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "todaySales": "Today's Sales",
+    "todayRevenue": "Today's Revenue",
+    "monthlyRevenue": "Monthly Revenue",
+    "lowStockItems": "Low Stock Items",
+    "bestSellingProduct": "Best Selling Product",
+    "salesPerDay": "Sales per Day",
+    "revenueTrend": "Revenue Trend",
+    "categoryDistribution": "Category Distribution"
+  },
+  "inventory": {
+    "title": "Inventory",
+    "searchPlaceholder": "Search products...",
+    "sku": "SKU",
+    "name": "Name",
+    "category": "Category",
+    "price": "Price",
+    "stock": "Stock",
+    "actions": "Actions",
+    "lowStock": "Low Stock"
+  },
+  "sales": {
+    "title": "Sales",
+    "searchPlaceholder": "Search sales...",
+    "date": "Date",
+    "product": "Product",
+    "quantity": "Qty",
+    "total": "Total",
+    "noSales": "No sales found"
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "rtl": "Right-to-Left (RTL)",
+    "storeInfo": "Store Information",
+    "owner": "Store Owner"
+  },
+  "common": {
+    "currency": "SAR",
+    "items": "items",
+    "viewAll": "View All"
+  }
+}
